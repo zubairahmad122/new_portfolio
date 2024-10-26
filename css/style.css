@@ -267,6 +267,7 @@ nav .header-menu li a:hover {
     position: relative;
     margin: 0 auto;
     padding: var(--hero-padding);
+    z-index: 10;
 }
 
 .light {
@@ -275,6 +276,7 @@ nav .header-menu li a:hover {
     right: 0;
     width: 600px;
     height: auto;
+    z-index: 0;
 }
 
 .hero-container {
@@ -340,8 +342,9 @@ nav .header-menu li a:hover {
    About Section Styling
    ============================ */
    .about-section {
-    background-color: var(--background-secondary);
-    position: relative;
+       background-color: var(--background-secondary);
+       position: relative;
+       z-index: 10;
 }
 
 .rounded-wrapper {
@@ -396,6 +399,8 @@ nav .header-menu li a:hover {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
+    z-index: 10;
     gap: var(--gap-medium);
 }
 

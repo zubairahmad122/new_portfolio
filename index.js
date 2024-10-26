@@ -84,7 +84,7 @@ const portfolioTitleAnimation = () => {
   gsap.from(".char", {
     scrollTrigger: {
       trigger: ".portfolio-title",
-      start: "0% 30%",
+      start: "30% 50%",
       end: "100% 100%",
       scrub: 2,
     },
@@ -131,7 +131,7 @@ const portfolioSectionAnimation = () => {
     const cardTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: card,
-        start: "30% 90%",
+        start: "30% 60%",
         end: "100% 100%",
         scrub: 2,
       }
@@ -139,8 +139,7 @@ const portfolioSectionAnimation = () => {
 
     cardTimeline.from(card.querySelector(".project-img img"), { opacity: 0, y: 160, duration: 1.5, ease: "power3.out" })
       .from(card.querySelector(".project-detail h2"), { opacity: 0, y: 150, duration: 1.2, ease: "power2.out" })
-      .from(card.querySelector(".project-detail p"), { opacity: 0, y: 150, duration: 1.2, ease: "power2.out" })
-      .from(card.querySelector(".project-detail a"), { opacity: 0, y: 150, duration: 1, ease: "power2.out" });
+      .from(card.querySelector(".project-detail p,.hire-me-btn"), { opacity: 0, y: 150, duration: 1.2, ease: "power2.out" })
   });
 };
 
