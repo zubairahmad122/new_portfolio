@@ -26,9 +26,6 @@
     --transition: all 400ms ease;
     /* Dimensions */
     --container-max-width: 1600px;
-    --container-width-lg: 82%;
-    --container-width-md: 90%;
-    --container-width-sm: 94%;
     --section-padding: 10rem;
     --hero-padding: 16rem 0;
     --circle-size: 150px;

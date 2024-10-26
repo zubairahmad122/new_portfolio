@@ -2,7 +2,7 @@
 @media (max-width: 1260px) {
     .container {
         width: 100%;
-        padding: 0 var(--container-width-md);
+        padding: 0 8rem;
     }
 
     .secondary-btn, .primary-btn {
@@ -41,7 +41,7 @@
 /* ========== Media Query for Screen Width 1024px or Less ========== */
 @media (max-width: 1024px) {
     .container {
-        padding: 0 var(--container-width-sm);
+        padding: 0 6rem;
     }
 
     .hero-section {
