@@ -1,0 +1,172 @@
+/* ========== Media Query for Screen Width 1200px or Less ========== */
+@media (max-width: 1260px) {
+    .container {
+        width: 100%;
+        padding: 0 var(--container-width-md);
+    }
+
+    .secondary-btn, .primary-btn {
+        min-width: auto;
+        padding: 1.6rem 2rem;
+        font-size: 1.4rem;
+    }
+    
+    /* Hero Section Adjustments */
+    .hero-section {
+        background-position: 200%;
+    }
+    .hero-left p {
+        font-size: 1.5rem;
+    }
+    .hero-left .hero-btns {
+        margin: 2.5rem 0;
+    }
+    .hero-btns .cta-btn {
+        padding: 1.4rem 1.5rem;
+        font-size: 1.4rem;
+    }
+    h1 {
+        font-size: 4.2rem;
+    }
+    .hero-right img {
+        width: 100%;
+    }
+
+    /* About Section Adjustments */
+    .about-container .about-left img {
+        max-width: 100%;
+    }
+}
+
+/* ========== Media Query for Screen Width 1024px or Less ========== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--container-width-sm);
+    }
+
+    .hero-section {
+        background-position: 350%;
+    }
+
+    h1 {
+        font-size: 4.1rem;
+    }
+
+  
+    /* portfolio Card Adjustments */
+    .portfolio-card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .portfolio-card .project-img,
+    .portfolio-card .project-detail {
+        width: 90%;
+    }
+}
+
+/* ========== Media Query for Screen Width 868px or Less ========== */
+@media (max-width: 868px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 8rem;
+    }
+    .hero-left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-right img {
+        width: 80%;
+    }
+    .hero-section {
+        background-position: bottom;
+        background-size: 500px;
+    }
+
+    /* About Section Adjustments */
+    .about-container {
+        flex-direction: column;
+    }
+    .about-container .about-left,
+    .about-container .about-right {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: var(--gap-medium);
+    }
+    .about-section .about-right p {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+    }
+    .about-container .about-left img {
+        max-width: 80%;
+    }
+}
+
+/* ========== Media Query for Screen Width 768px or Less (Tablets) ========== */
+@media (max-width: 768px) {
+    #preloader {
+        display: none;
+    }
+    /* Navbar Adjustments */
+    nav .header-menu {
+        flex-direction: column;
+        padding: 7rem 4rem;
+        position: absolute;
+        top: 80px;
+        right: -100%;
+        border-radius: 1rem;
+        border: 1px solid var(--button-border);
+        background: linear-gradient(var(--primary-dark), #093663);
+        transition: all 0.2s ease-in;
+    }
+    .header-menu.open-menu {
+        right: 2rem;
+    }
+    #menuIcon {
+        display: inline-block;
+    }
+}
+
+/* ========== Media Query for Screen Width 668px or Less ========== */
+@media (max-width: 668px) {
+    .container {
+        padding: 0 3rem;
+    }
+
+    /* Services Section Adjustments */
+    .services-grid {
+        gap: 8.7rem 2.3rem;
+    }
+    .contact-form .inputs-wrapper {
+        flex-direction: column;
+    }
+    .contact-container {
+        padding: 6rem 3rem;
+    }
+}
+
+/* ========== Media Query for Screen Width 468px or Less ========== */
+@media (max-width: 468px) {
+    /* Hero Section Adjustments */
+    .hero-left .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-left .hero-btns a {
+        width: 100%;
+    }
+
+    /* portfolio Card Adjustments */
+    .portfolio-card .project-img,
+    .portfolio-card .project-detail {
+        width: 100%;
+    }
+
+
+}

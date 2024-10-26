@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern portfolio</title>
+    <!-- ---------Font import ----------  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- ================== CSS Import ===========  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mediaQuery.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+           
+            emailjs.init({
+                publicKey: "DA8_nee1jF3v6YpQU",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="preloader-left"></div>
+        <div class="preloader-right"></div>
+        <div class="preloader-content">
+            Preparing Awesomeness...
+        </div>
+    </div>
+    <!-- ================= header =================== -->
+    <header id="header" class="header">
+        <div class="header-container container">
+            <div class="header-logo">
+                <h2>Zubii</h2>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-menu">
+                    <li><a href="#hero" class="header-link">Home</a></li>
+                    <li><a href="#about" class="header-link">About</a></li>
+                    <li><a href="#services" class="header-link">Services</a></li>
+                    <li><a href="#portfolio" class="header-link">portfolio</a></li>
+                    <li><a href="#contact" class="header-link">Contact Us</a></li>
+                </ul>
+               <div class="menu_icons">
+               <div id="menuIcon" class="toggle">
+                <i  data-lucide="align-left"></i>
+               </div>
+               <div id="closeIcon">
+                   <i  data-lucide="x"></i>
+                </div>
+                
+               </div>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+     <!-- ================= Hero Section =================== -->
+<section id="hero" class="hero-section">
+    <img src="./images/common/hero-light.png" class="light" alt="Decorative light effect" loading="lazy">
+    <div class="hero-container container">
+        <div class="hero-left">
+            <h1>Discover the <span class="highlight">Creative Work</span> of <span class="highlight">Zubair</span></h1>
+            <p>I'm Zubii, crafting visually stunning websites with <span class="highlight">cutting-edge
+                    technology</span> for a seamless digital experience.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="secondary-btn">Explore My Projects</a>
+                <a href="#portfolio" class="primary-btn">Download Resume</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="./images/common/profile.png" alt="Profile picture of Zubair" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ================= About Section =================== -->
+<section id="about" class="about-section">
+    <div class="rounded-wrapper">
+        <div class="rounded-div"></div>
+    </div>
+    <div class="container">
+        <div class="about-container">
+            <img src="./images/common/hero-light.png" class="light" alt="Decorative light effect" loading="lazy">
+            <div class="about-left">
+                <img src="./images/common/myimg1.png" alt="Zubair's personal image" loading="lazy">
+            </div>
+            <div class="about-right">
+                <h1>About Us <span><img class="highlight-star" src="./images/icons/Star.svg" alt="Decorative star icon" loading="lazy"></span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur. Maecenas convallis ac duis mauris dictum mi ante. Lorem
+                    non et elit parturient odio. Iaculis commodo ut pellentesque aliquam risus aliquam arcu pharetra
+                    pellentesque. Ultrices at arcu quis eget sed donec lacinia amet suspendisse. Dignissim velit
+                    neque pharetra.
+
+                    faucibus. Sapien curabitur nisl dolor egestas euismod netus hac semper. Mi ornare feugiat sit
+                    pellentesque sed. Purus.</p>
+                <button class="primary-btn">Download CV</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- ================= services Section =================== -->
+        <section id="services" class="services-section">
+            <!-- <img class="light2" src="./images/common/light2.svg" alt=""> -->
+            <div class="rounded-wrapper1">
+                <div class="rounded-div1"></div>
+            </div>
+           <div class="container">
+            <div class="services-container">
+
+
+                <div class="services-heading">
+
+                    <h2>Services <span><img class="highlight-star" src="./images/icons/Star.svg" alt="Decorative star icon" loading="lazy"></span></h2>
+                    <h4 class="section-subtitle">Why You Should <span class="highlight">Hire Me</span> For Your Next
+                        Project?</h4>
+                    <p class="section-description">
+                        I specialize in modern web development, using cutting-edge tools like React, Next.js, and the
+                        MERN stack to build high-performance, responsive web applications. Below are the key services I
+                        offer.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="icon"><i data-lucide="monitor"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Building fast, responsive websites using React and Next.js for optimal performance and SEO.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="icon"><i data-lucide="server"></i></div>
+                        <h3>Back-end Integration</h3>
+                        <p>Connecting web apps with RESTful APIs, GraphQL, Firebase, and other services for smooth data
+                            flow.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="icon"><i data-lucide="git-branch"></i></div>
+                        <h3>State Management</h3>
+                        <p>Efficiently managing application state using Redux, Context API, or Zustand for scalable
+                            apps.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="icon"><i data-lucide="layout"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Creating intuitive user interfaces with custom animations and modern design principles.</p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div class="icon"><i data-lucide="upload-cloud"></i></div>
+                        <h3>App Deployment</h3>
+                        <p>Deploying web apps on platforms like Vercel, Netlify, and AWS with continuous integration.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <div class="icon"><i data-lucide="settings"></i></div>
+                        <h3>Testing and Optimization</h3>
+                        <p>Ensuring stability through testing, code optimization, and performance improvements.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+           </div>
+        </section>
+
+      
+   <!-- ================= portfolio Section =================== -->
+
+        <div class="portfolio-title">
+            <h1>portfolio</h1>
+        </div>
+        <!-- <!-- ================= portfolio Section =================== -- -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container portfolio-container">
+                <!-- project full stack  -->
+                <div class="portfolio-card">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/fullstackeco.png"
+                            alt="Full Stack E-commerce IKONIC STORE project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>Full-Stack E-commerce IKONIC STORE</h2>
+                        <p>The IKONIC STORE landing page, built using the MERN stack (MongoDB, Express, React, Node.js),
+                            offers a modern, vibrant interface for users to browse and purchase products. After signing
+                            in, users can explore the product catalog, filter items by price and category, and add
+                            products to their cart or wishlist. The store features seamless Stripe integration, allowing
+                            users to complete secure payments directly on the site. The responsive design ensures smooth
+                            navigation across all devices, with real-time cart updates and an intuitive checkout process
+                            for a streamlined shopping experience.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 2  -->
+                <div class="portfolio-card row-reverse">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/monna.png" alt="Monna Landing Page project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>Monna Landing Page</h2>
+                        <p>This is a modern and responsive landing page designed to showcase financial insights in a
+                            visually engaging way. It provides real-time data on assets and networks, helping users
+                            easily manage their investments and liquidity. With an intuitive interface and seamless
+                            interaction, the page integrates advanced tools for tracking financial metrics. The landing
+                            page was built using HTML5, CSS3, JavaScript, and Bootstrap, ensuring a smooth, responsive
+                            experience across various devices.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 3  -->
+                <div class="portfolio-card">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/eccom1.png" alt="EShoping project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>EShoping</h2>
+                        <p>The EShoping landing page welcomes users with a clear "Shop Now" button leading to a
+                            family-friendly product collection. Functionality includes a product catalog with filters
+                            for narrowing down searches by brand, price, and product category. The page also features an
+                            add-to-cart system where users can select multiple products, see their cart updates in
+                            real-time, and access the cart from any page via a persistent icon in the header. This
+                            streamlined navigation enhances the overall shopping experience while keeping it simple and
+                            intuitive.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 4  -->
+                <div class="portfolio-card row-reverse">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/secret-block.png"
+                            alt="SecretBlock - Crypto Exchange project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>SecretBlock - Crypto Exchange</h2>
+                        <p>A sleek and futuristic landing page built with React.js for a cryptocurrency exchange
+                            platform, emphasizing user privacy and financial anonymity. The design offers intuitive
+                            navigation, real-time data display, and a seamless interface for users to explore
+                            cryptocurrency prices and platform features.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 5  -->
+                <div class="portfolio-card">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/ai.png" alt="AI Content Generator project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>AI Content Generator</h2>
+                        <p>The AI Content Generator, built with Next.js and using PostgreSQL with the Gemini engine for
+                            its database, provides a sleek and modern interface for users to create AI-driven content.
+                            After signing in, users can select from various content templates and filter them by type,
+                            such as blogs, articles, or social media posts. The system includes an add-to-drafts option
+                            for saving work in progress and offers a real-time content preview, allowing users to make
+                            adjustments before finalizing and publishing their content.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 6  -->
+                <div class="portfolio-card row-reverse">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/reborn-tree.png" alt="GreenLeaf Hub project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>GreenLeaf Hub</h2>
+                        <p>The RebornGreen web app, built with Next.js and integrated with APIs and Stripe for payments,
+                            enables users to support tree planting and carbon offset projects seamlessly. Users can
+                            explore environmental initiatives, make secure donations, and track their contributions—all
+                            in real-time.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 7  -->
+                <div class="portfolio-card">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/hostel-ease.png" alt="StayManager project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>StayManager</h2>
+                        <p>The Hostel Ease dashboard, built with React and using Recharts.js for data visualization,
+                            provides a comprehensive interface for hostel management. The app allows users to track room
+                            availability, manage check-ins and check-outs, monitor room status, and visualize occupancy
+                            statistics through intuitive charts. With a clean and user-friendly layout, this system
+                            makes it easy to manage hostel operations efficiently.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 8  -->
+                <div class="portfolio-card row-reverse">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/joyn-digital.png" alt="Joyn Digital project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>Joyn Digital</h2>
+                        <p>The Joyn company website, created using Next.js with SEO optimization, is a complete web
+                            solution designed to showcase services, studio work, and client projects. The sleek and
+                            professional design ensures optimal performance and visibility on search engines, offering a
+                            seamless user experience across all devices. Integrated with dynamic components, the site
+                            allows users to explore services, view portfolios, and contact the company for business
+                            inquiries.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- project 9  -->
+                <div class="portfolio-card">
+                    <div class="project-img">
+                        <img loading="lazy" src="./images/portfolio/portfolio-proj.png"
+                            alt="Creative Digital portfolio project image">
+                    </div>
+                    <div class="project-detail">
+                        <h2>Creative Digital portfolio</h2>
+                        <p>This personal portfolio website, built using HTML, CSS, JavaScript, and GSAP for animations,
+                            showcases a clean and interactive design to present professional work. The site features
+                            sections for the user's portfolio, contact information, and an introduction to their skills.
+                            Smooth animations, powered by GSAP, enhance the user experience, making the website visually
+                            engaging. Although the name "Zubair Ahmad" is a placeholder, the layout can easily be
+                            customized for any freelance professional looking to display their work creatively.</p>
+                        <a href="#contact"  class="">Hire Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ================= Contact Us Section =================== -->
+        <section id="contact" class="contact-section container">
+            <h2>Contact Me</h2>
+            <div class="circle-left">
+            </div>
+            <div class="circle-right">
+            </div>
+            <div class="contact-container ">
+
+
+
+                <form class="contact-form" id="contact-form" onsubmit="handleEmailSubmission(event)">
+                    <div class="inputs-wrapper">
+                        <div class="input-wrapper">
+                            <label for="name">Name</label>
+                            <input required type="text" id="name" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email">Email</label>
+                            <input required type="email" id="email" name="email" placeholder="Your EMail">
+                        </div>
+                    </div>
+
+
+                    <div class="input-wrapper">
+                        <label for="phone">Phone number</label>
+                        <input required type="number" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="message">Message</label>
+                        <textarea required name="message" id="message"></textarea>
+                    </div>
+
+
+                    <button type="submit" class="primary-btn">Submit</button>
+
+
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====================== Footer ========================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 by Zubair Ahmad All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- ====================== Scripts ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="./index.js"></script>
+
+    
+</body>
+
+</html>
