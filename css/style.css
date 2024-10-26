@@ -126,6 +126,19 @@ h4 { font-size: var(--font-size-h4); }
     text-transform: uppercase;
     border-radius: 8px;
     font-family: var(--font1);
+    transition: var(--transition);
+}
+
+.secondary-btn:hover,
+.primary-btn:hover{
+    transform: scale(0.95) rotate(-3deg); 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+}
+.secondary-btn:hover{
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.2); 
+}
+.primary-btn:hover{
+    box-shadow: 0px 8px 15px rgba(229, 255, 0, 0.2); 
 }
 
 .primary-btn {
@@ -210,9 +223,9 @@ header .container {
     align-items: center;
 }
 
-.logo h2 {
-    color: var(--highlight-yellow);
-    font-family: var(--font2);
+.header-logo img {
+    width: 100px;
+    height: auto;
 }
 
 nav .header-menu {
@@ -357,7 +370,7 @@ nav .header-menu li a:hover {
     align-items: flex-start;
     justify-content: center;
     padding: var(--section-padding) 0;
-    gap: var(--gap-large);
+    gap: 5rem;
 }
 
 .about-container .about-left {
@@ -425,7 +438,7 @@ nav .header-menu li a:hover {
 }
 
 .services-container{
-    padding: 10rem 0;
+    padding: var(--section-padding) 0;
 }
 
 .services-container .light2 {
@@ -576,7 +589,7 @@ nav .header-menu li a:hover {
     margin-top: 2rem;
 }
 
-.portfolio-card .project-detail h2 {
+.project-detail h2 {
     font-size: 3.5rem;
 }
 
@@ -586,22 +599,27 @@ nav .header-menu li a:hover {
     margin-top: 2rem;
 }
 
-.portfolio-card .project-detail a {
+.project-detail a {
     background-color: var(--highlight-yellow);
     display: inline-block;
     margin-top: 4rem;
     border-radius: 8px;
     color: var(--primary-dark);
     padding: 14px 27px;
+    transition: var(--transition);
+}
+.project-detail a:hover{
+    transform: scale(0.95) rotate(-3deg); 
+    box-shadow: 0px 8px 15px rgba(255, 221, 0, 0.2); 
 }
 
 /* ============================
-   Contact Section Styling
+Contact Section Styling
    ============================ */
    .contact-section {
     background-color: transparent;
     color: var(--light-gray);
-    padding: 10rem 0;
+    padding: var(--section-padding) 0;
     position: relative;
 }
 
@@ -702,6 +720,11 @@ input[type=number] {
     width: 100%;
 }
 
+.contact-form button{
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
 /* =======================
    Footer Styling
    ======================= */

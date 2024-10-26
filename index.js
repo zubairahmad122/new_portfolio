@@ -64,7 +64,7 @@ const startDesktopAnimations = () => {
     .to(".preloader-content", { y: -20, opacity: 0, duration: 1, ease: "power2.inOut" }, "+=0.5")
     .to(".preloader-left", { x: "-100%", duration: 1.5, ease: "power2.inOut" })
     .to(".preloader-right", { x: "100%", duration: 1.5, ease: "power2.inOut", onComplete: () => document.getElementById("preloader").style.display = "none" }, "-=1.5")
-    .from(".header-logo h2", { y: -50, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
+    .from(".header-logo img", { y: -50, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
     .from("header li", { y: -50, opacity: 0, duration: 1, ease: "power3.out", stagger: 0.2 }, "-=0.8")
     .from(".hero-section .hero-left h1", { opacity: 0, y: 50, duration: 1, ease: "power3.out" }, "-=0.5")
     .from(".hero-section .hero-left p", { opacity: 0, y: 50, duration: 1, ease: "power3.out" }, "-=0.7")
