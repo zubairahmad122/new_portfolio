@@ -16,46 +16,6 @@ const handleNavbarScroll = () => {
 
 
 
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "3",
-  loop: true,  // Ensures infinite looping
-  autoplay: {
-    delay: 3000,               // Delay between slides (1 second)
-    disableOnInteraction: false, // Keeps autoplay active after interaction
-    pauseOnMouseEnter: false,   // Prevents stopping on mouse hover (if relevant)
-  },
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    0: {               // For screens 0px and above (smallest screens)
-      slidesPerView: 1,
-    },
-    640: {             // For screens 640px and above (e.g., tablets)
-      slidesPerView: 2,
-    },
-    1024: {            // For screens 1024px and above (e.g., desktops)
-      slidesPerView: 3,
-    },
-    
-  }
-});
-
-// Restart autoplay in case it stops unexpectedly
-swiper.autoplay.start();
-
-
 
 // Handle opening and closing of the menu with CSS class toggling
 const handleMenuToggle = () => {
