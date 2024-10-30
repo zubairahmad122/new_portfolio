@@ -68,6 +68,10 @@
 
 /* ========== Media Query for Screen Width 868px or Less ========== */
 @media (max-width: 868px) {
+    .bottom-scroll-arrow,
+    .upper-arow-sticky{
+        display: none;
+    }
     .hero-container {
         flex-direction: column;
         gap: 8rem;

@@ -1,15 +1,61 @@
 // Debounced scroll event to toggle navbar background
 const handleNavbarScroll = () => {
   const navbar = document.querySelector("header");
+  const upperSticky = document.querySelector('.upper-arow-sticky')
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 90) {
+      upperSticky.classList.add('run')
       navbar.classList.add("scrolled");
     } else {
+      upperSticky.classList.remove('run')
       navbar.classList.remove("scrolled");
     }
   });
 };
+
+
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "3",
+  loop: true,  // Ensures infinite looping
+  autoplay: {
+    delay: 3000,               // Delay between slides (1 second)
+    disableOnInteraction: false, // Keeps autoplay active after interaction
+    pauseOnMouseEnter: false,   // Prevents stopping on mouse hover (if relevant)
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {               // For screens 0px and above (smallest screens)
+      slidesPerView: 1,
+    },
+    640: {             // For screens 640px and above (e.g., tablets)
+      slidesPerView: 2,
+    },
+    1024: {            // For screens 1024px and above (e.g., desktops)
+      slidesPerView: 3,
+    },
+    
+  }
+});
+
+// Restart autoplay in case it stops unexpectedly
+swiper.autoplay.start();
+
+
 
 // Handle opening and closing of the menu with CSS class toggling
 const handleMenuToggle = () => {
@@ -28,6 +74,24 @@ const handleMenuToggle = () => {
   // Attach event listeners
   menuIcon.addEventListener("click", toggleMenu);
   closeIcon.addEventListener("click", toggleMenu);
+  const Cursor = document.getElementById("cursor");
+  const Body = document.querySelector("body");
+  
+  // Set cursor dimensions (you can adjust these values as needed)
+  const cursorWidth = Cursor.offsetWidth / 2;
+  const cursorHeight = Cursor.offsetHeight / 2;
+  
+  Body.addEventListener("mousemove", (dets) => {
+      gsap.to(Cursor, {
+          x: dets.x - cursorWidth,
+          y: dets.y - cursorHeight,
+          duration: 1,
+          ease: "back.out"
+      });
+  });
+  
+
+
 };
 
 
@@ -59,6 +123,7 @@ const initializeAnimations = () => {
 
 const startDesktopAnimations = () => {
   const tl = gsap.timeline();
+  
 
   tl.to(".preloader-content", { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out" })
     .to(".preloader-content", { y: -20, opacity: 0, duration: 1, ease: "power2.inOut" }, "+=0.5")

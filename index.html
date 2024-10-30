@@ -15,6 +15,7 @@
     <!-- ================== CSS Import ===========  -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mediaQuery.css">
+    <link rel="stylesheet" href="./assets/swiper/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -35,8 +36,17 @@
             Preparing Awesomeness...
         </div>
     </div>
+
+    <div id="cursor">
+            
+    </div>
+
+
+
+
     <!-- ================= header =================== -->
     <header id="header" class="header">
+
         <div class="header-container container">
             <div class="header-logo">
                 <img src="./images/common/mylogo.png" alt="zubair">
@@ -64,19 +74,27 @@
     </header>
 
     <main>
+        <!-- ================= Sticky Arrow =================== -->
+        <a href="#" class="upper-arow-sticky"> <i data-lucide="arrow-up"></i></i></a>
         <!-- ================= Hero Section =================== -->
         <section id="hero" class="hero-section">
-            <img src="./images/common/hero-light.png" class="light" alt="Decorative light effect" loading="lazy">
             <div class="hero-container container">
+                <div class="bottom-scroll-arrow">
+                   <a href="#about">
+                    <i data-lucide="arrow-down" ></i>
+                   </a>
+                </div>
+                <img src="./images/common/hero-light.png" class="light" alt="Decorative light effect" loading="lazy">
                 <div class="hero-left">
                     <h1>Discover the <span class="highlight">Creative Work</span> of <span
                             class="highlight">Zubair</span></h1>
                     <p>I'm Zubii, crafting visually stunning websites with <span class="highlight">cutting-edge
                             technology</span> for a seamless digital experience.</p>
                     <div class="hero-btns">
-                        <a href="#portfolio" class="secondary-btn">Explore My Projects</a>
-                        <a href="./assets/mycv.pdf" download class="primary-btn">Download Resume</a>
+                        <a href="#portfolio" class="secondary-btn">Explore My Projects <i data-lucide="rocket"></i></a>
+                        <a href="./assets/mycv.pdf" download class="primary-btn">Download Resume <i data-lucide="arrow-down-to-line"></i></a>
                     </div>
+                   
                 </div>
                 <div class="hero-right">
                     <img src="./images/common/hero-profile.png" alt="Profile picture of Zubair" loading="lazy">
@@ -86,20 +104,29 @@
 
         <!-- ================= About Section =================== -->
         <section id="about" class="about-section">
+            <div class="about-light-img">
+
+                <img src="./images/common/hero-light.png" class="light" alt="Decorative light effect"
+                loading="lazy">
+            </div>
             <div class="rounded-wrapper">
                 <div class="rounded-div"></div>
             </div>
             <div class="container">
                 <div class="about-container">
-                    <img src="./images/common/hero-light.png" class="light" alt="Decorative light effect"
-                        loading="lazy">
                     <div class="about-left">
                         <img src="./images/common/profile-about.png" alt="Zubair's personal image" loading="lazy">
                     </div>
                     <div class="about-right">
                         <h1>About Us <span><img class="highlight-star" src="./images/icons/Star.svg"
                                     alt="Decorative star icon" loading="lazy"></span></h1>
-                        <p>Hi, I’m Zubair, a passionate frontend developer specializing in the MERN stack with two years of hands-on experience. I thrive on crafting user-friendly, responsive web applications using React and enjoy turning complex problems into seamless user experiences. My expertise spans across the full stack, though I’m particularly drawn to building interactive and efficient interfaces that make digital products intuitive and enjoyable to use. I’m always excited to take on new challenges and continue growing my skills in the ever-evolving world of web development.</p>
+                        <p>Hi, I’m Zubair, a passionate frontend developer specializing in the MERN stack with two years
+                            of hands-on experience. I thrive on crafting user-friendly, responsive web applications
+                            using React and enjoy turning complex problems into seamless user experiences. My expertise
+                            spans across the full stack, though I’m particularly drawn to building interactive and
+                            efficient interfaces that make digital products intuitive and enjoyable to use. I’m always
+                            excited to take on new challenges and continue growing my skills in the ever-evolving world
+                            of web development.</p>
                         <a href="./assets/mycv.pdf" download class="primary-btn">Download CV</a>
                     </div>
                 </div>
@@ -120,8 +147,8 @@
 
                         <h2>Services <span><img class="highlight-star" src="./images/icons/Star.svg"
                                     alt="Decorative star icon" loading="lazy"></span></h2>
-                        <h4 class="section-subtitle">Why You Should <span class="highlight">Hire Me</span> For Your Next
-                            Project?</h4>
+                        <h4 class="section-subtitle">Why You
+                            Why You Should <span class="highlight">Hire Me</span> For Your Next Project?</h4>
                         <p class="section-description">
                             I specialize in modern web development, using cutting-edge tools like React, Next.js, and
                             the
@@ -213,7 +240,7 @@
                             users to complete secure payments directly on the site. The responsive design ensures smooth
                             navigation across all devices, with real-time cart updates and an intuitive checkout process
                             for a streamlined shopping experience.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -230,7 +257,7 @@
                             interaction, the page integrates advanced tools for tracking financial metrics. The landing
                             page was built using HTML5, CSS3, JavaScript, and Bootstrap, ensuring a smooth, responsive
                             experience across various devices.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -248,7 +275,7 @@
                             real-time, and access the cart from any page via a persistent icon in the header. This
                             streamlined navigation enhances the overall shopping experience while keeping it simple and
                             intuitive.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -264,7 +291,7 @@
                             platform, emphasizing user privacy and financial anonymity. The design offers intuitive
                             navigation, real-time data display, and a seamless interface for users to explore
                             cryptocurrency prices and platform features.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -281,7 +308,7 @@
                             such as blogs, articles, or social media posts. The system includes an add-to-drafts option
                             for saving work in progress and offers a real-time content preview, allowing users to make
                             adjustments before finalizing and publishing their content.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -296,7 +323,7 @@
                             enables users to support tree planting and carbon offset projects seamlessly. Users can
                             explore environmental initiatives, make secure donations, and track their contributions—all
                             in real-time.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -312,7 +339,7 @@
                             availability, manage check-ins and check-outs, monitor room status, and visualize occupancy
                             statistics through intuitive charts. With a clean and user-friendly layout, this system
                             makes it easy to manage hostel operations efficiently.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -329,7 +356,7 @@
                             seamless user experience across all devices. Integrated with dynamic components, the site
                             allows users to explore services, view portfolios, and contact the company for business
                             inquiries.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
 
@@ -347,12 +374,116 @@
                             Smooth animations, powered by GSAP, enhance the user experience, making the website visually
                             engaging. Although the name "Zubair Ahmad" is a placeholder, the layout can easily be
                             customized for any freelance professional looking to display their work creatively.</p>
-                        <a href="#contact" class="hire-me-btn">Hire Me</a>
+                        <a href="#" target="_blank" class="hire-me-btn">View Project</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= Testamonial Section =================== -->
+
+        <section class="testimonial container">
+            <div class="testimonial__container mySwiper ">
+                <div id="sec7" class="testimonial__content swiper-wrapper">
+
+
+                    <div class="testimonial__slide swiper-slide">
+                      <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <img src="./images/testamonial/testi21.png" alt="client image">
+                        </div>
+                        <div class="client-review-stars">
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                        </div>
+                        <span class="testimonial__name">Amana Payan</span>
+                        <span class="testimonial__position">CEO Of Figma</span>
+                        <div class="quote_wrapper">
+                            <p class="testimonial__quote">
+                                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.  
+                            </p>
+                            <i fill="yellow" data-lucide="quote"></i>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="testimonial__slide swiper-slide">
+                      <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <img src="./images/testamonial/testi21.png" alt="client image">
+                        </div>
+                        <div class="client-review-stars">
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                        </div>
+                        <span class="testimonial__name">Amana Payan</span>
+                        <span class="testimonial__position">CEO Of Figma</span>
+                        <div class="quote_wrapper">
+                            <p class="testimonial__quote">
+                                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.  
+                            </p>
+                            <i fill="yellow" data-lucide="quote"></i>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="testimonial__slide swiper-slide">
+                      <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <img src="./images/testamonial/testi21.png" alt="client image">
+                        </div>
+                        <div class="client-review-stars">
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                        </div>
+                        <span class="testimonial__name">Amana Payan</span>
+                        <span class="testimonial__position">CEO Of Figma</span>
+                        <div class="quote_wrapper">
+                            <p class="testimonial__quote">
+                                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.  
+                            </p>
+                            <i fill="yellow" data-lucide="quote"></i>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="testimonial__slide swiper-slide">
+                      <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <img src="./images/testamonial/testi21.png" alt="client image">
+                        </div>
+                        <div class="client-review-stars">
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                            <i fill="yellow" data-lucide="star"></i>
+                        </div>
+                        <span class="testimonial__name">Amana Payan</span>
+                        <span class="testimonial__position">CEO Of Figma</span>
+                        <div class="quote_wrapper">
+                            <p class="testimonial__quote">
+                                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.  
+                            </p>
+                            <i fill="yellow" data-lucide="quote"></i>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
 
 
 
@@ -403,6 +534,24 @@
     <!-- ====================== Footer ========================== -->
     <footer>
         <div class="container">
+            <div class="footer_icons">
+                
+                    <a class="icon" href="#" target="_blank">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a class="icon" href="#" target="_blank">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a class="icon" href="#" target="_blank">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a class="icon" href="#" target="_blank">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                  
+               
+               
+            </div>
             <p>&copy; 2024 by Zubair Ahmad All rights reserved</p>
         </div>
     </footer>
@@ -411,6 +560,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="./assets/swiper/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
 
 

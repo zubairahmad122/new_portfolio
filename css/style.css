@@ -123,7 +123,15 @@ h4 { font-size: var(--font-size-h4); }
     text-transform: uppercase;
     border-radius: 8px;
     font-family: var(--font1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     transition: var(--transition);
+}
+.primary-btn svg, .secondary-btn svg{
+    width: 20px;
+    height: 20px;
 }
 
 .secondary-btn:hover,
@@ -149,6 +157,38 @@ h4 { font-size: var(--font-size-h4); }
     border: 1px solid var(--button-border);
     color: var(--neutral-gray);
 }
+
+/* ============================
+   Sticky  Arrow
+   ============================ */
+   .upper-arow-sticky{
+    position: fixed;
+    right: 100px;
+    background: var(--highlight-yellow);
+    box-shadow: 0 5px 30px var(--highlight-yellow);
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 80;
+    cursor: pointer;
+    color: #2d2e32;
+    transition: all .5s ease;
+    opacity: 0;
+    bottom: -50px;
+}
+.upper-arow-sticky:hover{
+background: #2d2e32;
+color: #e9e7e7;
+}
+.upper-arow-sticky.run{
+    bottom: 50px;
+    opacity: 1;
+}
+
+
 
 /* ============================
    PreLoader Styling
@@ -186,6 +226,30 @@ h4 { font-size: var(--font-size-h4); }
     align-items: center;
     justify-content: center;
 }
+
+/* ============================
+   Custom cursor
+   ============================ */
+
+   #cursor{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    justify-content: center; pointer-events: none;
+    font-size: 10px;
+    color: rgb(3, 62, 255);
+    box-sizing: 10px 10px 30px #6026ff;
+    height: 30px;
+    background: transparent;
+    border-radius: 50px;
+    box-shadow: 0 1px 20px var(--highlight-yellow);
+    border: 2px solid var(--highlight-yellow);
+}
+
 
 /* ============================
    Header Section Styling
@@ -230,15 +294,33 @@ nav .header-menu {
     gap: 2rem;
 }
 
-nav .header-menu li a {
+nav .header-menu li{
+    position: relative;
     color: var(--light-gray);
     text-transform: uppercase;
     font-family: var(--font1);
-    transition: var(--transition);
+   
 }
-
-nav .header-menu li a:hover {
+nav .header-menu li::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 0%;
+    height: 0px;
+    left: 0px;
+    transition: var(--transition);
+    background-color: var(--accent-blue);
+}
+nav .header-menu li:hover::after {
+    height: 2px;
+    width: 100%;
+}
+nav .header-menu li:hover{
     color: var(--accent-blue);
+}
+nav .header-menu li a {
+    color: inherit;
+    font-family: inherit;
 }
 
 .menu_icons svg {
@@ -282,7 +364,25 @@ nav .header-menu li a:hover {
     align-items: center;
     position: relative;
 }
-
+ .bottom-scroll-arrow{
+    border: 2px solid var(--highlight-yellow);
+    border-radius: 50%;
+    display: inline-block;
+    width: 60px;
+    bottom: 0px;
+    left: 10rem;
+    position: absolute;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--highlight-yellow);
+    animation: topBottomAnimate 1s alternate infinite;
+    box-shadow:  0 1px 20px var(--highlight-yellow);
+}
+a{
+    color: inherit;
+}
 .hero-left {
     width: 50%;
 }
@@ -340,10 +440,16 @@ nav .header-menu li a:hover {
    ============================ */
    .about-section {
        background-color: var(--background-secondary);
-       position: relative;
        z-index: 10;
-}
+   
+    }
+    
+    .about-section .about-light-img{
+        position: relative;
 
+        max-width: 1600px;
+        margin: 0 auto;
+    }
 .rounded-wrapper {
     position: relative;
     width: 100%;
@@ -486,14 +592,12 @@ nav .header-menu li a:hover {
     position: relative;
     border: 2px solid rgba(255, 255, 255, 0.1);
     padding-top: 8rem;
-
-    &:hover {
+}
+.service-card:hover {
         transform: translateY(-5px) scale(1.01);
         box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15), 0 8px 15px rgba(0, 0, 0, 0.3);
         border: 2px solid rgba(255, 255, 255, 0.2);
-    }
 }
-
 /* Icon Styling */
 .service-card .icon {
     margin-bottom: 1rem;
@@ -550,10 +654,14 @@ nav .header-menu li a:hover {
     height: 700px;
     align-items: center;
     justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .portfolio-title h1 {
-    font-size: 10vw;
+    font-size: clamp(20rem, 10vw, 6rem);
+    text-wrap: nowrap;
 }
 
 .char {
@@ -614,6 +722,109 @@ nav .header-menu li a:hover {
     transform: scale(0.95) rotate(-3deg); 
     box-shadow: 0px 8px 15px rgba(255, 221, 0, 0.2); 
 }
+
+/* ============================
+Contact Section Styling
+   ============================ */
+
+
+
+   
+/* -----------section 7 ------  */
+/* Testimonial Section */
+.testimonial {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+  }
+  
+  .testimonial__container {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+  }
+  
+  .testimonial__slide {
+      display: flex !important;
+      align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    padding: 3.2rem 2.5rem;
+    border-radius: 45px;
+    background: linear-gradient(145deg, var(--background-secondary), #2B3444);
+    color: var(--light-gray);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 20px rgba(250, 247, 255, 0.104);   
+}
+.testimonial__slide:hover{
+    box-shadow: 0 1px 20px rgba(250, 247, 255, 0.285);   
+}
+.testimonial__slide .testimonial-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.testimonial-content .testimonial-profile img{
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+  }
+  .testimonial-content .client-review-stars{
+      display: flex;
+      gap: 0.5rem;
+      margin: 2rem 0;
+      color: var(--highlight-yellow);
+    }
+    
+    .testimonial-content .testimonial__name{
+        font-size: 2.4rem;
+        font-weight: 500;
+    }
+    .testimonial-content .testimonial__position{
+        font-size: 1.8rem;
+        color: #b9b6b6;
+    }
+    .testimonial-content .testimonial__quote{
+        margin-top: 3rem;
+        text-align: center;
+        color: #b9b6b6;
+        font-family: var(--font1);
+    }
+    .testimonial-content .quote_wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .quote_wrapper  svg{
+        width: 80px;
+        height: 80px;
+        color: var(--highlight-yellow);
+        
+    }
+ 
+  /* Swiper Navigation */
+  .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #4070f4;
+  }
+  
+ 
+
+  
+
+
 
 /* ============================
 Contact Section Styling
@@ -740,6 +951,29 @@ footer {
     color: var(--light-gray);
 }
 
+footer .footer_icons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+}
+footer .footer_icons a{
+    display: flex;
+    background-color: var(--highlight-yellow);
+    padding: 1rem;
+    border-radius: 100%;
+    box-shadow: 0 1px 14px var(--highlight-yellow);
+     align-items: center;
+     justify-content: center;
+     color: black;
+     transition: var(--transition);
+}
+footer .footer_icons a:hover{
+    transform: scale(1.1);
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -755,5 +989,13 @@ footer {
     }
     100% {
         transform: translate(-50%, 50%) rotate(360deg);
+    }
+}
+@keyframes topBottomAnimate {
+    0% {
+        transform: translateY(0px) ;
+    }
+    100% {
+        transform: translateY(20px) ;
     }
 }
