@@ -16,6 +16,46 @@ const handleNavbarScroll = () => {
 
 
 
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "3",
+  loop: true,  // Ensures infinite looping
+  autoplay: {
+    delay: 3000,               // Delay between slides (1 second)
+    disableOnInteraction: false, // Keeps autoplay active after interaction
+    pauseOnMouseEnter: false,   // Prevents stopping on mouse hover (if relevant)
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {               // For screens 0px and above (smallest screens)
+      slidesPerView: 1,
+    },
+    640: {             // For screens 640px and above (e.g., tablets)
+      slidesPerView: 2,
+    },
+    1024: {            // For screens 1024px and above (e.g., desktops)
+      slidesPerView: 3,
+    },
+    
+  }
+});
+
+// Restart autoplay in case it stops unexpectedly
+swiper.autoplay.start();
+
+
 
 // Handle opening and closing of the menu with CSS class toggling
 const handleMenuToggle = () => {
@@ -85,11 +125,7 @@ const startDesktopAnimations = () => {
   const tl = gsap.timeline();
   
 
-  tl.to(".preloader-content", { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out" })
-    .to(".preloader-content", { y: -20, opacity: 0, duration: 1, ease: "power2.inOut" }, "+=0.5")
-    .to(".preloader-left", { x: "-100%", duration: 1.5, ease: "power2.inOut" })
-    .to(".preloader-right", { x: "100%", duration: 1.5, ease: "power2.inOut", onComplete: () => document.getElementById("preloader").style.display = "none" }, "-=1.5")
-    .from(".header-logo img", { y: -50, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
+  tl.from(".header-logo img", { y: -50, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8") 
     .from("header li", { y: -50, opacity: 0, duration: 1, ease: "power3.out", stagger: 0.2 }, "-=0.8")
     .from(".hero-section .hero-left h1", { opacity: 0, y: 50, duration: 1, ease: "power3.out" }, "-=0.5")
     .from(".hero-section .hero-left p", { opacity: 0, y: 50, duration: 1, ease: "power3.out" }, "-=0.7")
@@ -100,26 +136,7 @@ const startDesktopAnimations = () => {
 
 
 
-// portfolio Title Animation
-const portfolioTitleAnimation = () => {
-  const h1Element = document.querySelector(".portfolio-title h1");
-  const text = h1Element.textContent;
-  h1Element.innerHTML = text.split("").map(char => `<span class='char'>${char}</span>`).join("");
 
-  gsap.from(".char", {
-    scrollTrigger: {
-      trigger: ".portfolio-title",
-      start: "30% 50%",
-      end: "100% 100%",
-      scrub: 2,
-    },
-    opacity: 0,
-    y: 150,
-    stagger: 0.03,
-    duration: 1,
-    ease: "power3.out",
-  });
-};
 
 // About Section Animation
 const aboutSectionAnimation = () => {
@@ -197,7 +214,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleNavbarScroll();
   handleMenuToggle();
   initializeAnimations();
-  portfolioTitleAnimation();
   aboutSectionAnimation();
   portfolioSectionAnimation();
   servicesSectionAnimation();

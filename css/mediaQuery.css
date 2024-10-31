@@ -114,9 +114,6 @@
 
 /* ========== Media Query for Screen Width 768px or Less (Tablets) ========== */
 @media (max-width: 768px) {
-    #preloader {
-        display: none;
-    }
     /* Navbar Adjustments */
     nav .header-menu {
         flex-direction: column;

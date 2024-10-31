@@ -187,46 +187,6 @@ color: #e9e7e7;
     bottom: 50px;
     opacity: 1;
 }
-
-
-
-/* ============================
-   PreLoader Styling
-   ============================ */
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.preloader-content {
-    font-size: var(--highlight-font-size);
-    font-family: var(--font2);
-    color: var(--highlight-yellow);
-    position: absolute;
-    opacity: 0;
-    top: 50%;
-    font-weight: 700;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.preloader-left, .preloader-right {
-    width: 100%;
-    height: 50vh;
-    background-color: #0D1117;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* ============================
    Custom cursor
    ============================ */
@@ -647,25 +607,24 @@ a{
 /* ============================
    portfolio Section Styling
    ============================ */
-
-   .portfolio-title {
-    background: var(--primary-dark);
+   .portfolio-heading {
     display: flex;
-    height: 700px;
     align-items: center;
     justify-content: center;
-    max-width: 1600px;
-    margin: 0 auto;
-    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    margin-bottom: 10rem;
 }
 
-.portfolio-title h1 {
-    font-size: clamp(20rem, 10vw, 6rem);
-    text-wrap: nowrap;
+.portfolio-heading h4 {
+    font-weight: 600;
+    font-family: var(--font1) !important;
 }
 
-.char {
-    display: inline-block;
+.portfolio-heading p {
+    font-size: 1.8rem;
+    max-width: 800px;
 }
 
 .portfolio-section {
@@ -727,6 +686,102 @@ a{
 Contact Section Styling
    ============================ */
 
+
+
+   
+/* -----------section 7 ------  */
+/* Testimonial Section */
+.testimonial {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+  }
+  
+  .testimonial__container {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+  }
+  
+  .testimonial__slide {
+      display: flex !important;
+      align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    padding: 3.2rem 2.5rem;
+    border-radius: 45px;
+    background: linear-gradient(145deg, var(--background-secondary), #2B3444);
+    color: var(--light-gray);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 20px rgba(250, 247, 255, 0.104);   
+}
+.testimonial__slide:hover{
+    box-shadow: 0 1px 20px rgba(250, 247, 255, 0.285);   
+}
+.testimonial__slide .testimonial-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.testimonial-content .testimonial-profile img{
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+  }
+  .testimonial-content .client-review-stars{
+      display: flex;
+      gap: 0.5rem;
+      margin: 2rem 0;
+      color: var(--highlight-yellow);
+    }
+    
+    .testimonial-content .testimonial__name{
+        font-size: 2.4rem;
+        font-weight: 500;
+    }
+    .testimonial-content .testimonial__position{
+        font-size: 1.8rem;
+        color: #b9b6b6;
+    }
+    .testimonial-content .testimonial__quote{
+        margin-top: 3rem;
+        text-align: center;
+        color: #b9b6b6;
+        font-family: var(--font1);
+    }
+    .testimonial-content .quote_wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .quote_wrapper  svg{
+        width: 80px;
+        height: 80px;
+        color: var(--highlight-yellow);
+        
+    }
+ 
+  /* Swiper Navigation */
+  .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #4070f4;
+  }
+  
+ 
+
+  
 
 
 
