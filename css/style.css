@@ -345,6 +345,8 @@ a{
 }
 .hero-left {
     width: 50%;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-left h1 {
